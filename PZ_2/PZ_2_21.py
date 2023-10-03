@@ -1,2 +1,3 @@
 inp = input("Введите трёхзначное число: ")
-print(str(inp[0] + inp[2] + inp[1]))
+if int(inp).isdigit() and len(str(inp)) == 2:
+  print(str(inp[0] + inp[2] + inp[1]))
