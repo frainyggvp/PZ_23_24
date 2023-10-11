@@ -1,7 +1,8 @@
 def take_number():
   inp = input("Введите трёхзначное число: ")
-  if inp.isdigit() and len(str(inp)) == 3:
-    print(str(inp[0] + inp[2] + inp[1]))
+  if inp.isdigit() and len(str(inp)) == 3 and int(inp) > 99:
+    inp = int(inp)
+    print(str(inp//100) + str(inp%10) + str(inp//10%10))
   else:
     print("Некорректные вводные данные")
     take_number()
