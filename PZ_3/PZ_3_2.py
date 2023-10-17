@@ -13,4 +13,4 @@ if a.isdigit() and b.isdigit() and c.isdigit():
     elif c > a > b:
         print(a)
 else:
-    print("Не числа")
+    print("Не все переменные являются числами!")
