@@ -4,7 +4,7 @@
 integer = input("Введите целое положительное число: ")
 
 if not integer.isdigit():
-    print("Не число! False")
+    print("Не то! False")
 elif len(integer) != 3:
     print("Не трёхзначное число! False")
 elif integer.isdigit():
