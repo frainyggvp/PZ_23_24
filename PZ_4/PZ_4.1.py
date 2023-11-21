@@ -15,6 +15,9 @@ def custom_exm(x, n):
 try:
     x = int(input("Введите x:"))
     n = int(input("Введите n:"))
-    print(f"Приближённое значение: {custom_exm(x, n)}, точное значение: {math.exp(x)}")
+    if not n > 0:
+        print("N не больше нуля")
+    else:
+        print(f"Приближённое значение: {custom_exm(x, n)}, точное значение: {math.exp(x)}")
 except ValueError:
     print("Введены некоректные данные")
