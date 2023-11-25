@@ -3,7 +3,7 @@
 import random
 
 def random_four():
-    random_digit = str(random.randint(999, 10000))
+    random_digit = str(random.randint(1000, 10000))
     journal = []
     print(random_digit)
 
