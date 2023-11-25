@@ -4,7 +4,7 @@
 import math
 
 try:
-    x = int(input("Введите x:"))
+    x = float(input("Введите x:"))
     n = int(input("Введите n:"))
     if not n > 0:
         print("N не больше нуля")
