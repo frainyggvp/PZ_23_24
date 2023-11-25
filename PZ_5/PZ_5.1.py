@@ -7,6 +7,8 @@ def random_four():
     journal = []
     print(random_digit)
 
+    retry = False
+
     for digit in random_digit:
         counter = 0
         for i in random_digit:
@@ -14,6 +16,8 @@ def random_four():
                 counter += 1
         if counter > 1 and digit not in journal:
             journal.append(digit)
+            retry = True
             print(digit)
+    print(retry)
 
 random_four()

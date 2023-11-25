@@ -5,9 +5,9 @@
 # четвертую степень пяти данных чисел.
 
 def PowerA234(A):
-    B = A**A
-    C = B**A
-    D = C**A
+    B = A**2
+    C = A**3
+    D = A**4
     return B, C, D
 
 try:
@@ -18,5 +18,3 @@ try:
     print(PowerA234(float(input("Введите 5 число: "))))
 except ValueError:
     print("Введены неверные данные")
-except OverflowError:
-    print("Результат слишком велик")
