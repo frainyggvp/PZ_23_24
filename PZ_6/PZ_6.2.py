@@ -9,7 +9,7 @@ A = [1, 12, 43, 65, 18, 35, 44]
 
 def find_closest_sum_pair(R, numbers):
     closest_sum = float()  # Инициализируем переменную для хранения наименьшей разницы между суммой и R
-    result_pair = [None, None]  # Переменная для хранения найденной пары
+    result_pair = []  # Переменная для хранения найденной пары
 
     for i in range(len(numbers)):
         for j in range(i+1, len(numbers)):
@@ -22,4 +22,5 @@ def find_closest_sum_pair(R, numbers):
 
 result = find_closest_sum_pair(R, A)
 result.sort()
+print(A)
 print(f"Две ближайшие к числу {R} суммирующиеся числа (их индексы): {result}")

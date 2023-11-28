@@ -10,7 +10,8 @@ for i in range(0, 10):
         itFinds = True
         B.append(i)
 
-print(B[-1])
-
+print(A)
 if not itFinds:
     print(0)
+else:
+    print(B[-1])
