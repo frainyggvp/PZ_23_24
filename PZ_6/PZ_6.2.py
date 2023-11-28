@@ -8,8 +8,8 @@ A = [1, 12, 43, 65, 18, 35, 44]
 
 
 def find_closest_sum_pair(R, numbers):
-    closest_sum = float()  # Инициализируем переменную для хранения наименьшей разницы между суммой и R
-    result_pair = []  # Переменная для хранения найденной пары
+    closest_sum = float()
+    result_pair = []
 
     for i in range(len(numbers)):
         for j in range(i+1, len(numbers)):
