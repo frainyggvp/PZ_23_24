@@ -23,4 +23,4 @@ def find_closest_sum_pair(R, numbers):
 result = find_closest_sum_pair(R, A)
 result.sort()
 print(A)
-print(f"Две ближайшие к числу {R} суммирующиеся числа (их индексы): {result}")
+print(f"Два ближайших к числу {R} суммирующиеся числа (их индексы): {result}")
