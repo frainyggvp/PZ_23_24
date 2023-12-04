@@ -6,4 +6,4 @@ string = "Выйду я в  поле с  конём"
 string_join = ''.join(string.split(' '))
 result = string_join[::-1]
 
-print(f"Обычная строка: {string_join}\nИзменённая строка: {result}")
+print(f"Обычная строка: {string}\nИзменённая строка: {result}")
