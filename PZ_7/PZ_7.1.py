@@ -5,12 +5,7 @@ string = "ABC abc Python 61"
 new_string = ""
 
 for i in string:
-    if i.islower():
-        new_string += i.upper()
-    elif i.isupper():
-        new_string += i.lower()
-    else:
-        new_string += i
+    new_string += i.swapcase()
 
 print("Строка без изменений:", string)
 print("Строка изменённая:", new_string)
