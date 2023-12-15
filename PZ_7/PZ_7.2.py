@@ -10,7 +10,7 @@ for i in strings:
         strings.remove(i)
 
 strings = strings[::-1]
-string_join = ' '.join(strings)
+string_join = ''.join(strings)
 result = ""
 for i in strings:
     result += i + ' '
