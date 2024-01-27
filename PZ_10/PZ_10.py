@@ -4,18 +4,19 @@
 список не включать)."""
 
 students_friends = {
-    'Alice': {'Bob', 'Charlie'},
-    'Bob': {'Alice', 'David'},
-    'Charlie': {'Alice', 'Eve', 'Bob'},
-    'David': {'Bob', 'Eve'},
-    'Eve': {'Charlie', 'David', 'Bob'}
+    'Алиса': {'Саша', 'Данил'},
+    'Саша': {'Алиса', 'Аня'},
+    'Данил': {'Алиса', 'Саша'},
+    'Давид': {'Саша', 'Аня'},
+    'Аня': {'Данил', 'Саша'}
 }
 
-for student in students_friends:
-    guests_set = set()
-    for friend_list in students_friends.values():
-        if student in friend_list:
-            guests_set.update(friend_list.difference({student}))
-    if guests_set == set(students_friends.keys()).difference({student}):
-        print(f"Студент {student} побывал в гостях у всех остальных студентов.")
+guests = {student: set() for student in students_friends}
 
+for student, friends in students_friends.items():
+    for friend in friends:
+        guests[friend].add(student)
+
+for student, friends in guests.items():
+    if friends == set(students_friends.keys()) - {student}:
+        print(f"Студент {student} побывал в гостях у всех остальных студентов.")
