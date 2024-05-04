@@ -2,7 +2,7 @@
 # .xls, .xml, .html, .css, .py . Посчитать количество полученных элементов
 import re
 
-pattern = r'([^\s]+\.(xls|xml|html|css|py))'
+pattern = r'(\S+\.(xls|xml|html|css|py))'
 with open("expansion.txt", "r", encoding="utf-8") as file:
     matches = re.findall(pattern, file.read())
 
