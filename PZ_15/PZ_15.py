@@ -1,3 +1,6 @@
+"""Приложение СТРАХОВАЯ КОМПАНИЯ для некоторой организации. БД должна
+содержать таблицу Договор со следующей структурой записи: дата заключения, страховая
+сумма, вид страхования, тарифная ставка и филиал, в котором заключался договор."""
 import sqlite3
 
 data = [(1, '2023-12-10', 50000, 'car', 3, 'Rostov'),
@@ -26,19 +29,19 @@ with sqlite3.connect('company.db') as con:
     cur = con.cursor()
     cur.executemany("""INSERT OR REPLACE INTO contract values(?, ?, ?, ?, ?, ?)""", data)
 
-# with sqlite3.connect('company.db') as con:
-#     cur = con.cursor()
-#     cur.execute("""SELECT * FROM contract""")
-#     print(cur.fetchall())
-# with sqlite3.connect('company.db') as con:
-#     cur = con.cursor()
-#     cur.execute("""SELECT * FROM contract WHERE type=='car'""")
-#     print(cur.fetchall())
-# with sqlite3.connect('company.db') as con:
-#     cur = con.cursor()
-#     cur.execute("""SELECT * FROM contract WHERE rate>4""")
-#     # print(cur.fetchall())
-
+with sqlite3.connect('company.db') as con:
+    cur = con.cursor()
+    cur.execute("""SELECT * FROM contract""")
+    print(cur.fetchall())
+with sqlite3.connect('company.db') as con:
+    cur = con.cursor()
+    cur.execute("""SELECT * FROM contract WHERE type=='car'""")
+    print(cur.fetchall())
+with sqlite3.connect('company.db') as con:
+    cur = con.cursor()
+    cur.execute("""SELECT * FROM contract WHERE rate>4""")
+    print(cur.fetchall())
+    print('\n')
 
 # with sqlite3.connect('company.db') as con:
 #     cur = con.cursor()
